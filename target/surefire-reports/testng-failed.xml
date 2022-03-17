@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Tutorial Republic Smoke Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="5" name="Tutorial Web Page Verification(failed)" verbose="0">
+    <classes>
+      <class name="app.tests.TutorialRepublicTest">
+        <methods>
+          <include name="verifyTRChapterList"/>
+          <include name="loadData"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- app.tests.TutorialRepublicTest -->
+    </classes>
+  </test> <!-- Tutorial Web Page Verification(failed) -->
+</suite> <!-- Failed suite [Tutorial Republic Smoke Suite] -->

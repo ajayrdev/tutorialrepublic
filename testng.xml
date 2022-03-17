@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Tutorial Republic Smoke Suite" verbose="1">
+	<test name="Tutorial Web Page Verification">
+		<classes>
+			<class name="app.tests.TutorialRepublicTest" />
+		</classes>
+	</test>
+</suite>

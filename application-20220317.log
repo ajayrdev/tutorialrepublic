@@ -1,0 +1,1 @@
+2022-03-17 10:46:51.758 [main] INFO  automation.utilities.SeleniumUtils - Getting elements from listBy.xpath: //div[@class='chapters']//a

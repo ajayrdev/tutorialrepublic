@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 188.267 s <<< FAILURE! - in TestSuite
+verifyTRChapterList(app.tests.TutorialRepublicTest)  Time elapsed: 174.92 s  <<< FAILURE!
+java.lang.AssertionError: Something went wrong. Chapter links are not working properly
+	at app.tests.TutorialRepublicTest.verifyTRChapterList(TutorialRepublicTest.java:61)
+
