@@ -1,25 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="2" total="3" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-03-15T23:24:25 IST" name="Default suite" finished-at="2022-03-15T23:24:42 IST" duration-ms="16972">
+  <suite started-at="2022-03-20T19:07:29 IST" name="Default suite" finished-at="2022-03-20T19:10:43 IST" duration-ms="193943">
     <groups>
     </groups>
-    <test started-at="2022-03-15T23:24:25 IST" name="Default test" finished-at="2022-03-15T23:24:42 IST" duration-ms="16972">
+    <test started-at="2022-03-20T19:07:29 IST" name="Default test" finished-at="2022-03-20T19:10:43 IST" duration-ms="193943">
       <class name="app.tests.TutorialRepublicTest">
-        <test-method is-config="true" signature="loadData()[pri:0, instance:app.tests.TutorialRepublicTest@55b53d44]" started-at="2022-03-15T23:24:25 IST" name="loadData" finished-at="2022-03-15T23:24:25 IST" duration-ms="55" status="PASS">
+        <test-method is-config="true" signature="loadData()[pri:0, instance:app.tests.TutorialRepublicTest@1649b0e6]" started-at="2022-03-20T19:07:29 IST" name="loadData" finished-at="2022-03-20T19:07:29 IST" duration-ms="29" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadData -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:app.tests.TutorialRepublicTest@55b53d44]" started-at="2022-03-15T23:24:25 IST" name="setup" finished-at="2022-03-15T23:24:36 IST" duration-ms="10905" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:app.tests.TutorialRepublicTest@1649b0e6]" started-at="2022-03-20T19:07:29 IST" name="setup" finished-at="2022-03-20T19:07:45 IST" duration-ms="15915" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyTRWebPage()[pri:0, instance:app.tests.TutorialRepublicTest@55b53d44]" started-at="2022-03-15T23:24:36 IST" name="verifyTRWebPage" finished-at="2022-03-15T23:24:42 IST" duration-ms="5831" status="PASS">
+        <test-method signature="verifyTRChapterList()[pri:0, instance:app.tests.TutorialRepublicTest@1649b0e6]" started-at="2022-03-20T19:07:45 IST" name="verifyTRChapterList" finished-at="2022-03-20T19:10:40 IST" duration-ms="175649" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Something went wrong. Chapter links are not working properly]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Something went wrong. Chapter links are not working properly
+at org.testng.Assert.fail(Assert.java:97)
+at app.pages.TutorialRepublicWebPage.verifyChapterLinks(TutorialRepublicWebPage.java:140)
+at app.tests.TutorialRepublicTest.verifyTRChapterList(TutorialRepublicTest.java:61)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyTRWebPage -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:app.tests.TutorialRepublicTest@55b53d44]" started-at="2022-03-15T23:24:36 IST" name="tearDown" finished-at="2022-03-15T23:24:36 IST" duration-ms="0" status="PASS">
+        </test-method> <!-- verifyTRChapterList -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:app.tests.TutorialRepublicTest@1649b0e6]" started-at="2022-03-20T19:10:40 IST" name="tearDown" finished-at="2022-03-20T19:10:43 IST" duration-ms="2201" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

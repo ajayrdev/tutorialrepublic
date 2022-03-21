@@ -5,7 +5,7 @@
     <classes>
       <class name="app.tests.TutorialRepublicTest">
         <methods>
-          <include name="verifyTRChapterList"/>
+          <include name="verifyEachMenu"/>
           <include name="loadData"/>
           <include name="setup"/>
           <include name="tearDown"/>

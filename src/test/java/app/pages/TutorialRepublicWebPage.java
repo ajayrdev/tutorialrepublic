@@ -43,7 +43,6 @@ public class TutorialRepublicWebPage {
 	public static By segment = By.xpath("(//div [@class='segment'])[1]");
 
 	public TutorialRepublicWebPage(SeleniumUtils utils, WebDriver driver) {
-
 		this.utils = utils;
 		this.driver = driver;
 	}
@@ -102,9 +101,10 @@ public class TutorialRepublicWebPage {
 		}
 	}
 
-	public void displayChapterLinks() {
+	public void verifyChapterLinks() {
 		List<WebElement> chapterElements = utils.getElements(chapterLinks);
 		int chapterElementsCount = chapterElements.size();
+		System.out.println("chapterElementsCount: " + chapterElementsCount);
 		int chapterUrlsCount = 0;
 
 		Map<String, String> chatersObj = new HashMap<String, String>();
@@ -112,47 +112,65 @@ public class TutorialRepublicWebPage {
 			chatersObj.put(chapterElement.getAttribute("href").trim(), chapterElement.getText().trim());
 		}
 
+		System.out.println("chatersObj");
+		System.out.println(chatersObj);
+
 		for (Map.Entry<String, String> entry : chatersObj.entrySet()) {
 			driver.get(entry.getKey());
 
 			if (driver.getTitle().contains(entry.getValue())) {
 				chapterUrlsCount++;
+			} else {
+				System.out.print("href:" + entry.getKey() + " -> ");
+				System.out.println("chapter Name:" + entry.getValue());
 			}
-			System.out.print("href:" + entry.getKey() + " -> ");
-			System.out.println("chapter Name:" + entry.getValue());
 		}
+
+		System.out.println("Url Count:" + chapterUrlsCount);
+		System.out.println("source Links count:" + chapterElementsCount);
 
 		if (chapterElementsCount == chapterUrlsCount) {
 			System.out.println("All " + chapterUrlsCount + " page links are loading without issues");
 		} else {
-			System.out.println(chapterElementsCount);
+
 			System.out.println(chapterUrlsCount);
 			Assert.fail("Something went wrong. Chapter links are not working properly");
 		}
-		System.out.println("Url Count:" + chapterUrlsCount);
-		System.out.println("source Links count:" + chapterElementsCount);
 
 	}
 
 	public void verifySegmentValue() {
+
 		Map<String, String> menuListExpected = new HashMap<String, String>();
-		menuListExpected.put("HOME", "WEb TUTORIALS");
-		menuListExpected.put("HOME", "WEb TUTORIALS");
-		menuListExpected.put("HOME", "WEb TUTORIALS");
-		
+		menuListExpected.put("HOME", "WEB TUTORIALS");
+		menuListExpected.put("HTML5", "HTML BASIC");
+		menuListExpected.put("CSS3", "CSS BASIC");
+		menuListExpected.put("JAVASCRIPT", "JAVASCRIPT BASIC");
+		menuListExpected.put("JQUERY", "JQUERY BASIC");
+		menuListExpected.put("BOOTSTRAP5", "BOOTSTRAP BASIC");
+		menuListExpected.put("v4.6", "BOOTSTRAP BASIC");
+		menuListExpected.put("PHP7", "PHP BASIC");
+		menuListExpected.put("SQL", "SQL BASIC");
+		menuListExpected.put("REFERENCES", "WEB TUTORIALS");
+		menuListExpected.put("EXAMPLES", "WEB TUTORIALS");
+		menuListExpected.put("FAQ", "WEB TUTORIALS");
+
 		Map<String, String> menuListActual = new HashMap<String, String>();
-		
+//		14 links
 		List<WebElement> menuLinks = utils.getElements(By.xpath("//div[@class='menu']//a"));
-		
+
 		for (WebElement menuLink : menuLinks) {
-			if(!(menuLink.getText().trim().equals("Snippets"))) {
-			WebElement element = menuLink;
-			element.click();
-			String menuKey = element.getText(); 
-			String menuValue = utils.getText(By.xpath("(//div[@class='segment'])[1]")); 
-			menuListActual.put(menuKey, menuValue);
+			if (!(menuLink.getText().trim().equals("SNIPPETS") && menuLink.getText().equals("Online HTML Editor"))) {
+				WebElement element = menuLink;
+				String menuKey = element.getText();
+				element.click();
+
+				String menuValue = utils.getText(By.xpath("(//div[@class='segment'])[1]"));
+				menuListActual.put(menuKey, menuValue);
 			}
 		}
-		//Assertion.. need to verify if both the map objects are same
+		Assert.assertEquals(menuListActual.equals(menuListExpected), true, "Both Map Objects are not same");
+
+		// Assertion.. need to verify if both the map objects are same
 	}
 }

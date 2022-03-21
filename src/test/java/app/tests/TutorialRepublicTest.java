@@ -53,18 +53,20 @@ public class TutorialRepublicTest {
 		webPage.verifySocialMediaLinks();
 	}
 
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void verifyTRChapterList() {
 
 		String Url = prop.getProperty("TRUrl");
 		webPage.launchTRWebPage(Url);
-		webPage.displayChapterLinks();
+		webPage.verifyChapterLinks();
 	}
 
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void verifyEachMenu() {
 		String Url = prop.getProperty("TRUrl");
-
+		webPage.launchTRWebPage(Url);
+		webPage.verifySegmentValue();
+		
 	}
 
 	@AfterMethod

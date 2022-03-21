@@ -1,0 +1,1 @@
+2022-03-18 11:14:19.305 [main] INFO  automation.utilities.SeleniumUtils - Getting elements from listBy.xpath: //div[@class='menu']//a

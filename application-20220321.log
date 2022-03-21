@@ -1,0 +1,2 @@
+2022-03-21 09:30:31.806 [main] INFO  automation.utilities.SeleniumUtils - Getting elements from listBy.xpath: //div[@class='menu']//a
+2022-03-21 09:30:43.968 [main] INFO  automation.utilities.SeleniumUtils - Getting text on the element By.xpath: (//div[@class='segment'])[1]
