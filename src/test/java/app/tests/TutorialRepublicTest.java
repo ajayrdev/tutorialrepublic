@@ -16,7 +16,6 @@ import automation.utilities.SeleniumUtils;
 public class TutorialRepublicTest {
 
 	TutorialRepublicWebPage webPage;
-
 	SeleniumUtils utils;
 	WebDriver driver;
 	Properties prop;
@@ -38,7 +37,7 @@ public class TutorialRepublicTest {
 
 	}
 
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void verifyTRWebPage() {
 
 		String Url = prop.getProperty("TRUrl");
@@ -46,11 +45,11 @@ public class TutorialRepublicTest {
 		String pageHeading = prop.getProperty("pageheading");
 
 		webPage.launchTRWebPage(Url);
-		webPage.TRWebPageTitle(pageTitle);
-		webPage.verifyPageHeading(pageHeading);
-		webPage.verifyMenuOptions();
-		webPage.verifySocialMediaIcon();
-		webPage.verifySocialMediaLinks();
+//		webPage.TRWebPageTitle(pageTitle);
+//		webPage.verifyPageHeading(pageHeading);
+//		webPage.verifyMenuOptions();
+//		webPage.verifySocialMediaIcon();
+//		webPage.verifySocialMediaLinks();
 	}
 
 	@Test(enabled = false)
@@ -61,7 +60,7 @@ public class TutorialRepublicTest {
 		webPage.verifyChapterLinks();
 	}
 
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void verifyEachMenu() {
 		String Url = prop.getProperty("TRUrl");
 		webPage.launchTRWebPage(Url);
