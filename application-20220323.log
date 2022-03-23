@@ -1,0 +1,17 @@
+2022-03-23 07:48:17.205 [main] INFO  automation.utilities.SeleniumUtils - Getting elements from listBy.xpath: (//img[@alt='TutorialRepublic'])[1]
+2022-03-23 07:48:18.474 [main] INFO  automation.utilities.SeleniumUtils - Getting Displayed element infoBy.xpath: //a[@title='Home Page']
+2022-03-23 07:48:18.775 [main] INFO  automation.utilities.SeleniumUtils - Getting Displayed element infoBy.xpath: //a[@title='HTML Tutorial']
+2022-03-23 07:48:18.928 [main] INFO  automation.utilities.SeleniumUtils - Getting Displayed element infoBy.xpath: //a[@title='CSS Tutorial']
+2022-03-23 07:48:19.072 [main] INFO  automation.utilities.SeleniumUtils - Getting Displayed element infoBy.xpath: //a[@title='JavaScript Tutorial']
+2022-03-23 07:48:19.278 [main] INFO  automation.utilities.SeleniumUtils - Getting Displayed element infoBy.xpath: //a[@title='jQuery Tutorial']
+2022-03-23 07:48:19.403 [main] INFO  automation.utilities.SeleniumUtils - Getting Displayed element infoBy.xpath: //a[@title='Bootstrap 5 Tutorial']
+2022-03-23 07:48:19.624 [main] INFO  automation.utilities.SeleniumUtils - Getting Displayed element infoBy.xpath: //a[@title='Bootstrap 4.6 Tutorial']
+2022-03-23 07:48:19.809 [main] INFO  automation.utilities.SeleniumUtils - Getting Displayed element infoBy.xpath: //a[@title='PHP Tutorial']
+2022-03-23 07:48:20.043 [main] INFO  automation.utilities.SeleniumUtils - Getting Displayed element infoBy.xpath: //a[@title='SQL Tutorial']
+2022-03-23 07:48:20.165 [main] INFO  automation.utilities.SeleniumUtils - Getting Displayed element infoBy.xpath: //a[@title='Web References']
+2022-03-23 07:48:20.279 [main] INFO  automation.utilities.SeleniumUtils - Getting Displayed element infoBy.xpath: //a[@title='Practice Examples and Demos']
+2022-03-23 07:48:20.412 [main] INFO  automation.utilities.SeleniumUtils - Getting Displayed element infoBy.xpath: //a[@title='Frequently Asked Questions and Answers']
+2022-03-23 07:48:20.536 [main] INFO  automation.utilities.SeleniumUtils - Getting Displayed element infoBy.xpath: //a[@title='Join us on Facebook']//i
+2022-03-23 07:48:20.688 [main] INFO  automation.utilities.SeleniumUtils - Getting Displayed element infoBy.xpath: //a[@title='Follow us on Twitter']//i
+2022-03-23 07:48:20.800 [main] INFO  automation.utilities.SeleniumUtils - Getting Displayed element infoBy.xpath: //a[@title='Send us an Email']//i
+2022-03-23 07:48:20.941 [main] INFO  automation.utilities.SeleniumUtils - Getting elements from listBy.xpath: //div[@class='social']//a

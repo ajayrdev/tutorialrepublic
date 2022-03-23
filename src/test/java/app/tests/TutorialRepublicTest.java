@@ -43,13 +43,12 @@ public class TutorialRepublicTest {
 		String Url = prop.getProperty("TRUrl");
 		String pageTitle = prop.getProperty("pageTitle");
 		String pageHeading = prop.getProperty("pageheading");
-
 		webPage.launchTRWebPage(Url);
-//		webPage.TRWebPageTitle(pageTitle);
-//		webPage.verifyPageHeading(pageHeading);
-//		webPage.verifyMenuOptions();
-//		webPage.verifySocialMediaIcon();
-//		webPage.verifySocialMediaLinks();
+		webPage.TRWebPageTitle(pageTitle);
+		webPage.verifyPageHeading(pageHeading);
+		webPage.verifyMenuOptions();
+		webPage.verifySocialMediaIcon();
+		webPage.verifySocialMediaLinks();
 	}
 
 	@Test(enabled = false)
